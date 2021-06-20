@@ -132,10 +132,23 @@ public class Medidas {
 
     }
     public static void divisaoPorZero(){
-        System.out.println("Qual é o dividendo (Número a ser dividido) ");
-        int dividendo = entrada.nextInt();
-        System.out.println("Qual é o divisor (Número que vai dividir o dividendo) ");
-        int divisor = entrada.nextInt();
+        System.out.print("Qual é o dividendo (Número a ser dividido) ");
+        byte dividendo = entrada.nextByte();
+        System.out.print("Qual é o divisor (Número que vai dividir o dividendo) ");
+        byte divisor = entrada.nextByte();
+
+        try {
+            System.out.println("O resultado é: " + dividendo / divisor);
+        }
+        catch (Exception e){
+            System.out.println("Mensagem temporária em Inglês: " + e.getMessage());
+
+
+
+        }
+        finally {
+            System.out.println("Por hoje é só pessoal!!");
+        }
     }
 
 }
